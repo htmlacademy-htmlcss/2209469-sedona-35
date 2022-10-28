@@ -115,30 +115,6 @@
     text-decoration: none;
   }
 
-  .button-detailed {
-    font-family: "PT Sans", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #756157;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  .button-favourites {
-    font-family: "PT Sans", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #82B3D3;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
   .page-header {
     color: #000000;
     background-color: #ffffff;
@@ -595,7 +571,7 @@
   .social-block {
     display: flex;
     width: 1060px;
-    margin: 40px 70px 30px 70px;
+    padding:  40px 70px 30px 70px;
   }
 
   .social {
@@ -966,7 +942,45 @@
     background-color: #ffffff;
   }
 
+  .button-detailed {
+    margin: 0;
+    padding: 8px 50px;
+    border-radius: 4px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #756157;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .button-favourites {
+    margin: 0;
+    padding: 8px 50px;
+    border-radius: 4px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #82B3D3;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .catalogd-stars {
+    margin: 0;
+    padding: 0;
+  }
+
   .catalog-rating {
+    margin: 0;
+    padding: 8px 50px;
+    border-radius: 4px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 20px;
