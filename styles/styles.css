@@ -82,6 +82,7 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .button-use {
@@ -97,6 +98,7 @@
     background-color: #82B3D3;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   .button-reset {
@@ -113,6 +115,9 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    border: medium none;
+    background: transparent;
+    cursor: pointer;
   }
 
   .page-header {
@@ -150,11 +155,6 @@
     padding: 0;
   }
 
-  .navigation-item {
-    margin: 0;
-    padding: 0;
-  }
-
   .navigation-link {
     display: block;
     padding: 20px 16px;
@@ -167,6 +167,25 @@
     background-color: #ffffff;
     text-decoration: none;
     text-transform: capitalize;
+  }
+
+  .navigation-link-current {
+    display: block;
+    padding: 20px 16px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .navigation-link-current::before {
+    border: 2px solid #756257;
+    content: "";
   }
 
   .navigation-user {
@@ -186,11 +205,11 @@
     padding: 0;
   }
 
-   .user-link {
+  .user-link {
     display: block;
     margin: 0;
     padding: 22px 12px;
-   }
+  }
 
   .favourites-number {
     margin: 0;
@@ -205,9 +224,9 @@
   }
 
   .user-button {
-   width: 160px;
-   margin: 14px auto;
-   padding: 0;
+    width: 160px;
+    margin: 14px auto;
+    padding: 0;
   }
 
   .navigation-button {
@@ -249,9 +268,7 @@
     background-image: url("../images/photo-sedona.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-
   }
-
 
   .description {
     width: 1200px;
@@ -270,7 +287,6 @@
   .description-title {
     width: 620px;
     margin: 0 auto;
-
   }
 
   .description-sedona {
@@ -406,12 +422,28 @@
     padding: 0;
   }
 
- .advantage-service-center {
-    width: 400px;
-    height: 384px;
-    margin: 0;
-    padding: 0;
+  .advantage-service-item:nth-child(2) {
+    background: none;
   }
+
+  .advantage-service-list .advantage-service-item:nth-child(1) {
+    background-image: url("../images/advantage/house.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .advantage-service-list .advantage-service-item:nth-child(2) {
+    background-image: url("../images/advantage/food.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .advantage-service-list .advantage-service-item:nth-child(3) {
+    background-image: url("../images/advantage/souvenir.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 
   .advantage-service-titel {
     margin: 185px 85px 30px 85px;
@@ -515,7 +547,7 @@
     display: flex;
     flex-direction: column;
     min-height: 214.86px;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
   }
 
@@ -578,7 +610,7 @@
   .social-block {
     display: flex;
     width: 1060px;
-    padding:  40px 70px 30px 70px;
+    padding: 40px 70px 30px 70px;
   }
 
   .social {
@@ -679,26 +711,23 @@
   }
 
   .breadcrumbs-item {
+    margin: 3px 10px 3px 0;
+    padding: 0.5px 0.5px 2.5px 0.5px;
+    background-image: url("../images/catalog/arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .breadcrumbs-item:last-child {
+    background-image: none;
     margin: 0;
     padding: 0;
-  }
-
-  .breadcrumbs-link {
-   width: 13px;
-   margin: 3px 10px 3px 0;
-   padding: 0.5px 0.5px 2.5px 0.5px;
-  }
-
-  .image-arrow-right {
-   width: 8px;
-   margin: 0;
-   margin-right: 10px;
   }
 
   .breadcrumbs-hotel {
     width: 73px;
     margin: 0;
-    padding: 0;
+    padding: 2px 2px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -850,6 +879,7 @@
     font-weight: 400;
     color: #333333;
     background-color: #ffffff;
+    cursor: pointer;
   }
 
   .sorting-block {
@@ -885,7 +915,7 @@
   }
 
   .image-card {
-    width:  16px;
+    width: 16px;
     margin: 0;
     padding: 17px 16px;
   }
@@ -915,6 +945,10 @@
     padding: 0;
   }
 
+  .catalog-link {
+    text-decoration: none;
+  }
+
   .image-hotel {
     width: 300px;
     margin: 20px 20px 16px 20px;
@@ -931,7 +965,7 @@
     font-weight: 700;
     color: #000000;
     background-color: #ffffff;
-    text-decoration: none;
+
   }
 
   .catalog-block {
@@ -939,7 +973,7 @@
     grid-template-columns: repeat(2, 140px);
     gap: 20px;
     margin: 0;
-    padding: 0 20px 16px 20px;
+    padding: 0 20px 20px 20px;
   }
 
   .catalog-hotel {
