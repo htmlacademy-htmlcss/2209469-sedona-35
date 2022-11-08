@@ -87,7 +87,8 @@
 
   .button-use {
     width: 191px;
-    margin: 0 0 32px 0;
+    margin: 0;
+    margin-bottom: 32px;
     padding: 8px 50px;
     border-radius: 4px;
     font-family: "PT Sans", sans-serif;
@@ -186,6 +187,9 @@
   .navigation-link-current::before {
     border: 2px solid #756257;
     content: "";
+    position: relative;
+    display: flex;
+    top: 45px;
   }
 
   .navigation-user {
@@ -209,11 +213,17 @@
     display: block;
     margin: 0;
     padding: 22px 12px;
+    text-decoration: none;
   }
 
   .favourites-number {
+    position: relative;
+    bottom: 16px;
+    right: 15px;
+    padding: 3px 5px;
+    border-radius: 50%;
+    letter-spacing: -0.1em;
     margin: 0;
-    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 10px;
     line-height: 10px;
@@ -255,7 +265,8 @@
 
   .welcome-sedona {
     display: block;
-    margin: 51px auto;
+    margin: 0 auto;
+    margin-top: 51px;
     margin-bottom: 82px;
   }
 
@@ -265,9 +276,10 @@
     margin: 0;
     color: #000000;
     background-color: #ffffff;
-    background-image: url("../images/photo-sedona.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    background-image: url("../images/image-panel.svg"), url("../images/photo-sedona.jpg");
+    background-size: 100% auto, 100% auto;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, center;
   }
 
   .description {
@@ -290,8 +302,8 @@
   }
 
   .description-sedona {
-    width: 651px;
     margin: auto;
+    margin-top: 25px;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
     line-height: 26px;
@@ -312,14 +324,15 @@
 
   .advantage-item {
     margin: 0;
-    padding: 0;
+    padding-top: 92px;
+    padding-bottom: 111px;
     width: 400px;
     background-color: #82B3D3;
   }
 
   .advantage-titel-blue {
     width: 175px;
-    margin: 92px 112.5px 62px 112.5px;
+    margin: 0 auto;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 24px;
@@ -331,14 +344,25 @@
   }
 
   .advantage-description-blue {
-    width: 230px;
-    margin: 62px 85px 111px 85px;
+    width: 214px;
+    margin: 0 auto;
+    margin-top: 62px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     color: #ffffff;
     background-color: #82B3D3;
     text-align: center;
+  }
+
+  .advantage-description-blue::before {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    content: "";
+    display: flex;
+    width: 60px;
+    position: relative;
+    bottom: 30px;
+    left: 75px;
   }
 
   .advantage-city {
@@ -350,20 +374,23 @@
 
   .advantage-item-center {
     margin: 0;
-    padding: 0;
+    padding-top: 103px;
+    padding-bottom: 121px;
     width: 400px;
     background-color: rgba(131, 179, 211, 0.12);
   }
 
   .advantage-item-center2 {
     margin: 0;
-    padding: 0;
+    padding-top: 103px;
+    padding-bottom: 121px;
     width: 400px;
     background-color: rgba(131, 179, 211, 0.2);
   }
 
   .advantage-titel-center {
-    margin: 103px 112.5px 62px 112.5px;
+    margin: 0 auto;
+    width: 175px;
     font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 28px;
@@ -374,30 +401,43 @@
   }
 
   .advantage-description-center {
-    margin: 62px 85px 121px 85px;
+    margin: 0 auto;
+    margin-top: 62px;
+    width: 230px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     color: #333333;
     text-align: center;
   }
 
-  .advantage-titel {
-    margin: 103px 112.5px 62px 112.5px;
-    font-family: "PT Sans", sans-serif;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    text-align: center;
+  .advantage-description-center::before {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    content: "";
+    display: flex;
+    width: 60px;
+    position: relative;
+    bottom: 30px;
+    left: 85px;
   }
 
   .advantage-description {
-    margin: 62px 85px 121px 85px;
+    margin: 0 auto;
+    margin-top: 62px;
+    width: 230px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     color: #333333;
     text-align: center;
+  }
+
+  .advantage-description::before {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    content: "";
+    display: flex;
+    width: 60px;
+    position: relative;
+    bottom: 30px;
+    left: 85px;
   }
 
   .advantage-bridge {
@@ -416,10 +456,10 @@
 
   .advantage-service-item {
     width: 400px;
-    height: 384px;
-    background: rgba(131, 179, 211, 0.12);
     margin: 0;
-    padding: 0;
+    padding-top: 80px;
+    padding-bottom: 81px;
+    background: rgba(131, 179, 211, 0.12);
   }
 
   .advantage-service-item:nth-child(2) {
@@ -429,24 +469,25 @@
   .advantage-service-list .advantage-service-item:nth-child(1) {
     background-image: url("../images/advantage/house.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 80px;
   }
 
   .advantage-service-list .advantage-service-item:nth-child(2) {
     background-image: url("../images/advantage/food.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 80px;
   }
 
   .advantage-service-list .advantage-service-item:nth-child(3) {
     background-image: url("../images/advantage/souvenir.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 80px;
   }
 
 
   .advantage-service-titel {
-    margin: 185px 85px 30px 85px;
+    margin: auto;
+    margin-top: 102px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 24px;
@@ -457,7 +498,9 @@
   }
 
   .advantage-service-description {
-    margin: 30px 85px 81px 85px;
+    margin: auto;
+    margin-top: 30px;
+    width: 230px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
@@ -488,12 +531,13 @@
   }
 
   .search-block {
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
   }
 
   .hotel-information {
-    margin: 0;
+    width: 297px;
+    margin: 0 auto;
     font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
@@ -505,7 +549,8 @@
 
   .hotel-information-date {
     width: 592px;
-    margin: 20px 0 54px 0;
+    margin: 0 auto;
+    margin-top: 20px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
@@ -518,7 +563,8 @@
   .hotel-search-sedona {
     display: block;
     border-radius: 4px;
-    margin: 0 108px 0 108px;
+    margin: 0 108px;
+    margin-top: 54px;
     padding: 8px 50px;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
@@ -536,12 +582,13 @@
     padding-bottom: 104px;
     width: 1200px;
     text-align: center;
-    background-image: url("../images/advantage/photo-bridge.jpg");
+    background-image: url("../images/advantage/image-appointment.jpg");
     color: #000000;
     background-color: #ffffff;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
+
 
   .appointment-block {
     display: flex;
@@ -564,7 +611,6 @@
     line-height: 36px;
     font-weight: 700;
     color: #ffffff;
-
   }
 
   .appointment-information-main {
@@ -610,7 +656,8 @@
   .social-block {
     display: flex;
     width: 1060px;
-    padding: 40px 70px 30px 70px;
+    padding: 40px 70px;
+    padding-bottom: 30px;
   }
 
   .social {
@@ -622,7 +669,8 @@
     flex-wrap: wrap;
     list-style-type: none;
     width: 142px;
-    margin: 5px 41.5px 5px 0;
+    margin: 5px 0;
+    margin-right: 41.5px;
     padding: 0;
   }
 
@@ -640,13 +688,14 @@
 
   .contacts {
     width: 720px;
+    margin: 0;
     margin-right: 41.5px;
     padding: 0;
   }
 
   .contacts-phone {
     width: 331px;
-    margin: 5px 194px 5px 195px;
+    margin: 5px 194px;
     font-family: "PT Sans", sans-serif;
     font-size: 40px;
     line-height: 40px;
@@ -676,7 +725,9 @@
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
-    background-image: url("../images/photo-sedona.jpg");
+    background-image: url("../images/image-filter.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
   }
 
   .header-filter {
@@ -711,28 +762,35 @@
   }
 
   .breadcrumbs-item {
-    margin: 3px 10px 3px 0;
-    padding: 0.5px 0.5px 2.5px 0.5px;
+    display: flex;
+    margin: 0;
+    margin-right: 10px;
+    padding: 3px 20px 2.5px 3px;
     background-image: url("../images/catalog/arrow-right.svg");
-    background-position: center;
+    background-position: right center;
     background-repeat: no-repeat;
   }
 
-  .breadcrumbs-item:last-child {
-    background-image: none;
+  .image-home {
     margin: 0;
-    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 2px;
   }
 
   .breadcrumbs-hotel {
     width: 73px;
     margin: 0;
-    padding: 2px 2px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;
   }
+
+  .breadcrumbs-item:last-child {
+    background-image: none;
+    margin: 0;
+    padding: 3px 0;
+   }
 
   .catalog-filter {
     display: flex;
@@ -743,7 +801,9 @@
 
   .catalog-filter-group {
     display: flex;
-    margin: 0 140.15px 3px 0;
+    margin: 0;
+    margin-right: 140.15px;
+    margin-bottom: 3px;
     padding: 0;
   }
 
@@ -752,12 +812,14 @@
     margin: 0;
     margin-right: 70px;
     padding: 0;
+    border: none;
   }
 
   .filter-radio {
     width: 150.43px;
     margin: 0;
     padding: 0;
+    border: none;
   }
 
   .catalog-filter-titel {
@@ -814,13 +876,16 @@
 
   .price-adjustment {
     width: 288px;
-    margin: 0 70px 0 0;
+    margin: 0 ;
+    margin-right: 70px;
     padding: 0;
   }
 
   .price-block {
     width: 116.33px;
-    margin: 0 171.6px 32px 0;
+    margin: 0;
+    margin-right: 171.6px;
+    margin-bottom: 32px;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -831,7 +896,8 @@
   .filter-button {
     display: block;
     width: 191px;
-    margin: 56px 0 0 0;
+    margin: 0;
+    margin-top: 56px;
     padding: 0;
   }
 
@@ -839,13 +905,15 @@
     display: flex;
     width: 1060px;
     height: 49px;
-    margin: 0 70px 40px 70px;
+    margin: 0 70px;
+    margin-bottom: 40px;
     padding: 0;
   }
 
   .sorting-title {
     width: 338px;
-    margin: 6.5px 200px 6.5px 0;
+    margin: 6.5px 0;
+    margin-right: 200px;
     font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
@@ -880,12 +948,13 @@
     color: #333333;
     background-color: #ffffff;
     cursor: pointer;
+    appearance: none;
+    background-image: url("../images/catalog/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: 250px center;
   }
 
   .sorting-block {
-    width: 141px;
-    margin: 0;
-    padding: 14px 99.07px 14px 20px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     color: #333333;
@@ -951,7 +1020,8 @@
 
   .image-hotel {
     width: 300px;
-    margin: 20px 20px 16px 20px;
+    margin: 20px 20px;
+    margin-bottom: 16px;
     padding: 0;
   }
 
@@ -1048,6 +1118,7 @@
 
   .pagination-list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     width: 400px;
     margin: 0;
@@ -1067,7 +1138,7 @@
     padding: 0;
   }
 
-  .pagination-item:nth-child(6) {
+  .pagination-item:last-child {
     margin: 0;
   }
 
