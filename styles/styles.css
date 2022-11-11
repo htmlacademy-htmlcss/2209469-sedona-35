@@ -54,7 +54,7 @@
     height: 100%;
   }
 
-  .body {
+  body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -91,12 +91,13 @@
   }
 
   .appointment-button:focus {
-    outline: 1px solid #82B3D3;
+    outline: 2px solid #343e71;
   }
 
   .appointment-button:active {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .button-use {
@@ -122,7 +123,7 @@
   }
   .button-use:focus {
     background-color: #68A2CA;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .button-use:active {
@@ -173,7 +174,6 @@
 
   .page-header {
     color: #000000;
-    background-color: #ffffff;
   }
 
   .navigation {
@@ -191,8 +191,12 @@
   }
 
   .navigation-logo:focus {
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #343e71;
     border-radius: 4px;
+  }
+
+  .navigation-logo:active {
+    outline: none;
   }
 
   .image-logo {
@@ -232,8 +236,18 @@
   }
 
   .navigation-link:focus {
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #343e71;
     border-radius: 4px;
+  }
+
+  .link-current::before {
+    height: 2px;
+    border: none;
+    background-color: #756257;
+    position: relative;
+    display: flex;
+    top: 49px;
+    content: "";
   }
 
   .navigation-link:active {
@@ -241,12 +255,8 @@
     outline: none;
   }
 
-  .link-current::before {
-    border: 2px solid #756257;
-    content: "";
-    position: relative;
-    display: flex;
-    top: 45px;
+  .link-current {
+    padding-top: 18px;
   }
 
   .navigation-user {
@@ -278,7 +288,7 @@
   }
 
   .user-link:focus {
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #343e71;
     border-radius: 4px;
   }
 
@@ -331,7 +341,7 @@
 
   .navigation-button:focus {
     background-color: #615048;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .navigation-button:active {
@@ -350,6 +360,7 @@
   .page-container {
     width: 1200px;
     margin: 0 auto;
+    background-color: #FFFFFF;
   }
 
   .welcome-sedona {
@@ -364,7 +375,6 @@
     min-height: 485px;
     margin: 0;
     color: #000000;
-    background-color: #ffffff;
     background-image: url("../images/image-panel.svg"), url("../images/photo-sedona.jpg");
     background-size: 100% auto, 100% auto;
     background-repeat: no-repeat, no-repeat;
@@ -376,18 +386,19 @@
     margin: 0;
     padding: 69px 0 90px 0;
     font-family: "PT Sans", sans-serif;
+    text-align: center;
+    color: #000000;
+  }
+
+  .description-titel {
+    width: 620px;
+    margin: 0 auto;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     text-align: center;
     color: #000000;
-    background-color: #ffffff;
     text-transform: uppercase;
-  }
-
-  .description-title {
-    width: 620px;
-    margin: 0 auto;
   }
 
   .description-sedona {
@@ -399,7 +410,6 @@
     font-weight: 400;
     text-align: center;
     color: #333333;
-    text-transform: uppercase;
   }
 
   .advantage-list {
@@ -420,7 +430,7 @@
   }
 
   .advantage-titel-blue {
-    width: 175px;
+    width: 171px;
     margin: 0 auto;
     padding: 0;
     font-family: "PT Sans", sans-serif;
@@ -433,7 +443,7 @@
   }
 
   .advantage-description-blue {
-    width: 214px;
+    width: 221px;
     margin: 0 auto;
     margin-top: 62px;
     padding: 0;
@@ -445,13 +455,15 @@
   }
 
   .advantage-description-blue::before {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    content: "";
+    position: relative;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
     display: flex;
     width: 60px;
-    position: relative;
     bottom: 30px;
-    left: 75px;
+    left: 80px;
+    content: "";
   }
 
   .advantage-city {
@@ -500,13 +512,15 @@
   }
 
   .advantage-description-center::before {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    content: "";
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
     display: flex;
     width: 60px;
     position: relative;
     bottom: 30px;
     left: 85px;
+    content: "";
   }
 
   .advantage-description {
@@ -520,13 +534,15 @@
   }
 
   .advantage-description::before {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    content: "";
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
     display: flex;
     width: 60px;
     position: relative;
     bottom: 30px;
     left: 85px;
+    content: "";
   }
 
   .advantage-bridge {
@@ -582,7 +598,7 @@
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
-    color: #333333;
+    color: #000000;
     text-transform: uppercase;
   }
 
@@ -671,7 +687,7 @@
 
   .hotel-search-sedona:focus {
     background-color: #615048;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .hotel-search-sedona:active {
@@ -691,11 +707,9 @@
     text-align: center;
     background-image: url("../images/advantage/image-appointment.jpg");
     color: #000000;
-    background-color: #ffffff;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
-
 
   .appointment-block {
     display: flex;
@@ -718,6 +732,7 @@
     line-height: 36px;
     font-weight: 700;
     color: #ffffff;
+    text-transform: uppercase;
   }
 
   .appointment-information-main {
@@ -748,12 +763,11 @@
 
   .form-email:focus {
     background-color: #E6E6E6;
-    outline: 1px solid #68A2CA;
   }
 
   .form-email:active {
     background-color: #F2F2F2;
-    outline: 1px solid #000000;
+    outline: 2px solid #000000;
   }
 
   .form-email {
@@ -772,7 +786,6 @@
     margin: 0;
     padding: 0;
     color: var(--footer-text);
-    background-color: var(--footer-bg-color);
   }
 
   .social-block {
@@ -791,7 +804,8 @@
     flex-wrap: wrap;
     list-style-type: none;
     width: 142px;
-    margin: 5px 0;
+    margin: 0;
+    margin-top: 11px;
     margin-right: 41.5px;
     padding: 0;
   }
@@ -806,6 +820,18 @@
     width: 24px;
     margin: 0;
     padding: 13px 11.67px;
+  }
+
+  .social-link:hover {
+  }
+
+  .social-link:focus  {
+    outline: 2px solid #343e71;
+    border-radius: 4px;
+  }
+
+  .social-link:active {
+    outline: none;
   }
 
   .contacts {
@@ -834,11 +860,13 @@
 
   .contacts-phone:focus {
     color: #756157;
-    outline: none;
+    outline: 2px solid #343e71;
+    border-radius: 4px;
   }
 
   .contacts-phone:active {
     color: rgba(117, 97, 87, 0.3);
+    outline: none;
   }
 
   .html-academy {
@@ -856,16 +884,16 @@
 
 
   .html-academy-link:hover {
-    position: absolute;
-    background-image: url("../images/footer/html-hover.svg");
-    background-repeat: no-repeat;
+
   }
 
 
   .html-academy-link:focus {
-    position: absolute;
-    background-image: url("../images/footer/html-hover.svg");
-    background-repeat: no-repeat;
+    outline: 2px solid #343e71;
+    border-radius: 4px;
+  }
+
+  .html-academy-link:active {
     outline: none;
   }
 
@@ -924,7 +952,15 @@
   }
 
   .breadcrumbs-link:hover {
+  }
 
+  .breadcrumbs-link:focus {
+    outline: 2px solid #343e71;
+    border-radius: 2px;
+  }
+
+  .breadcrumbs-link:active {
+    outline: none;
   }
 
   .image-home {
@@ -991,7 +1027,7 @@
     text-transform: capitalize;
   }
 
-  .catalog-filter-list1 {
+  .catalog-filter-checkbox {
     width: 112px;
     margin: 0;
     margin-right: 38.43px;
@@ -999,7 +1035,7 @@
     list-style-type: none;
   }
 
-  .catalog-filter-list2 {
+  .catalog-filter-radio {
     width: 141px;
     margin: 0;
     margin-right: 9.43px;
@@ -1033,13 +1069,50 @@
     width: 20px;
     height: 20px;
     border: 1px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #FFFFFF;
+    cursor: pointer;
+  }
+
+.input-control {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .control:hover .control-mark {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+  }
+
+  .control:focus .control-mark {
+  }
+
+  .control:active .control-mark {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid transparent;
+  }
+
+  .input-control[type="checkbox"]:checked + .control-mark::before,
+  .input-control[type="checkbox"]:checked + .control-mark::after  {
+    position: absolute;
+    background-color: #3F5E72;
+    content: "";
   }
 
   .input-control[type="checkbox"]:checked + .control-mark::before {
-    position: absolute;
-    content: "";
+    top: 10px;
+    left: 6px;
+    width: 13px;
+    height: 2px;
+    transform: rotate(130deg);
+  }
+
+  .input-control[type="checkbox"]:checked + .control-mark::after {
+    top: 12px;
+    right: 10px;
+    width: 7px;
+    height: 2px;
+    transform: rotate(42deg);
   }
 
   .control-mark-radio {
@@ -1051,9 +1124,23 @@
     border: none;
     border-radius: 50%;
     background-color: #FFFFFF;
+    cursor: pointer;
   }
 
-  .input-control[type="checkbox"]:checked + .control-mark-radio::before {
+  .control:hover .control-mark-radio {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 50% solid transparent;
+  }
+
+  .control:focus .control-mark-radio {
+  }
+
+  .control:active .control-mark-radio {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 50% solid transparent;
+  }
+
+  .input-control[type="radio"]:checked + .control-mark-radio::before {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -1064,9 +1151,17 @@
     content: "";
   }
 
-  .input-control {
-    margin: 0;
-    margin-right: 16px;
+  .control-label:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .control-label:focus {
+
+  }
+
+  .control-label:active {
+    color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
   }
 
@@ -1120,7 +1215,7 @@
 
   .price-input:active {
     background-color: #F2F2F2;
-    border: 2px solid #000000;
+    outline: 2px solid #000000;
   }
 
   .price-min {
@@ -1174,6 +1269,10 @@
     border: 2px solid #FFFFFF;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .range-toggle:focus {
+    outline: 2px solid #83B3D3;
   }
 
   .toggle-min {
@@ -1342,10 +1441,13 @@
   }
 
   .catalog-link:focus {
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #343e71;
     border-radius: 4px;
   }
 
+  .catalog-link:active {
+    outline: none;
+  }
 
   .image-hotel {
     width: 300px;
@@ -1409,12 +1511,13 @@
 
   .button-detailed:focus {
     background-color: #615048;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .button-detailed:active {
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .button-detailed:disabled {
@@ -1442,13 +1545,13 @@
   }
 
   .button-favourites:focus {
-    background-color: #68A2CA;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .button-favourites:active {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .button-favourites:disabled {
@@ -1477,12 +1580,13 @@
 
   .button-added:focus {
     background-color: #6C9E42;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .button-added:active {
     background-color: #7DB54F;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .button-added:disabled {
@@ -1510,10 +1614,22 @@
   }
 
   .pagination {
+    position: relative;
     text-align: center;
     width: 1060px;
     padding: 40px 70px 60px 70px;
     margin: 0;
+  }
+
+  .pagination::before {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    height: 1px;
+    width: 1060px;
+    border: none;
+    background-color: #E6E6E6;
+    content: "";
   }
 
   .pagination-list {
@@ -1587,12 +1703,13 @@
 
   .pagination-link:focus {
     background-color: #68A2CA;
-    outline: none;
+    outline: 2px solid #343e71;
   }
 
   .pagination-link:active {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .pagination-text {
@@ -1614,7 +1731,6 @@
     width: 1200px;
     text-align: center;
     color: #000000;
-    background-color: #ffffff;
   }
 
   .appointment-title-second {
@@ -1637,4 +1753,341 @@
     line-height: 26px;
     font-weight: 400;
     color: #333333;
+  }
+
+  .modal {
+
+  }
+
+  .modal-window {
+    margin: auto;
+    border-radius: 30px;
+    width: 717px;
+    background-color: #FFFFFF;
+  }
+
+  .modal-group {
+    position: relative;
+    width: 577px;
+    margin: 0;
+    padding: 64px 100px;
+  }
+
+  .search-titel {
+    width: 413px;
+    margin: 0;
+    margin-right: 130px;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 64px;
+    left: 613px;
+    width: 52px;
+    height: 52px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+  }
+
+  .modal-close::before {
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    width: 2px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #000000;
+    content: "";
+  }
+
+  .modal-close::after {
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    width: 2px;
+    height: 20px;
+    transform: rotate(-45deg);
+    background-color: #000000;
+    content: "";
+  }
+
+  .modal-close:hover {
+    background-color: #E6E6E6;
+  }
+
+  .modal-close:focus {
+    outline: 3px solid #83B3D3;
+    background-color: #E6E6E6;
+  }
+
+  .modal-close:active {
+    outline: none;
+    background-color: #E6E6E6;
+  }
+
+  .search-options {
+    margin-top: 64px;
+    width: 577px;
+  }
+
+  .date-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 577px;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .date-titel {
+    width: 117px;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .input-date {
+    width: 376px;
+    margin: 0;
+    margin-left: 24px;
+    padding: 12px 20px;
+    background-image: url("../images/image-registr.svg");
+    background-repeat: no-repeat;
+    background-position: 375px center;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 4px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .input-date:hover {
+    background-color: #E6E6E6;
+  }
+
+  .input-date:focus {
+    outline: 3px solid #83B3D3;
+    background-color: #E6E6E6;
+  }
+
+
+  .input-date:active {
+    outline: 2px solid #000000;
+    background-color: #F2F2F2;
+  }
+
+
+  .date-error {
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 23px;
+    margin-left: 157px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FF5757;
+  }
+
+  .free-rooms {
+    margin: 0;
+    margin-top: 4px;
+    margin-left: 157px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    background-color: #FFFFFF;
+  }
+
+  .person-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 577px;
+    margin: 0;
+    margin-top: 23px;
+    padding: 0;
+  }
+
+  .person-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-right: 64px;
+    padding: 0;
+    width: 247px;
+    border: none;
+  }
+
+  .person-item:nth-child(2) {
+    margin: 0;
+  }
+
+  .person-titel {
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .person-registr {
+    display: flex;
+    width: 110px;
+  }
+
+  .person-add {
+    position: relative;
+    width: 40px;
+    height: 48px;
+    margin: 0;
+    padding: 14px 10px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+  }
+
+  .person-add::before {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 2px;
+    height: 14px;
+    transform: rotate(90deg);
+    background-color: rgba(117, 97, 87, 0.3);
+    content: "";
+  }
+
+  .person-add:hover {
+  }
+
+  .person-add:focus {
+   color: #000000;
+   outline: 2px solid #343e71;
+  }
+
+  .person-add:active {
+    background-color: transparent;
+    outline: none;
+  }
+
+  .person-number {
+    width: 18px;
+    height: 20px;
+    margin: 0;
+    padding: 14px 10px;
+    background-color: #F2F2F2;
+    border: none;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+  }
+
+  .person-number:focus {
+    outline: none;
+  }
+
+  .person-remove {
+    position: relative;
+    width: 40px;
+    height: 48px;
+    padding: 14px 10px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+
+  .person-remove::before {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 2px;
+    height: 14px;
+    transform: rotate(90deg);
+    background-color: rgba(117, 97, 87, 0.3);
+    content: "";
+  }
+
+  .person-remove::after {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 2px;
+    height: 14px;
+    transform: rotate(0deg);
+    background-color: rgba(117, 97, 87, 0.3);
+    content: "";
+  }
+
+  .person-remove:focus {
+    outline: 2px solid #343e71;
+  }
+
+  .person-info {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin: 11px 0;
+    margin-left: 10px;
+    margin-right: 46px;
+    background-color: #83B3D3;
+    border: none;
+    cursor: pointer;
+  }
+
+  .person-info:focus {
+    outline: 2px solid #343e71;
+  }
+
+  .button-find {
+    width: 557px;
+    margin: 0 auto;
+    margin-top: 48px;
+    padding: 18px 78px;
+    border: none;
+    border-radius: 10px;
+    background-color: #83B3D3;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button-find:hover {
+    background-color: #68A2CA;
+  }
+
+  .button-find:focus {
+    outline: 2px solid #343e71;
+    background-color: #68A2CA;
+  }
+
+  .button-find:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.4);
+    outline: none;
   }
