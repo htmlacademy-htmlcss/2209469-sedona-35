@@ -100,6 +100,13 @@
     outline: none;
   }
 
+  .appointment-button:disabled {
+    background-color: #E5E5E5;
+    outline: none;
+    cursor: default;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   .button-use {
     width: 191px;
     margin: 0;
@@ -121,18 +128,23 @@
   .button-use:hover {
     background-color: #68A2CA;
   }
+
   .button-use:focus {
     background-color: #68A2CA;
     outline: 2px solid #343e71;
   }
 
   .button-use:active {
+    outline: none;
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
   }
 
   .button-use:disabled {
     background-color: #E5E5E5;
+    outline: none;
+    cursor: default;
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .button-reset {
@@ -169,6 +181,7 @@
   .button-reset:disabled {
     color: rgba(255, 255, 255, 0.2);
     outline: none;
+    cursor: default;
   }
 
   .person-remove {
@@ -204,8 +217,24 @@
     content: "";
   }
 
+  .person-remove:hover {
+    color: #000000;
+    background-color: #E6E6E6;
+  }
+
   .person-remove:focus {
+    background-color: #E6E6E6;
     outline: 2px solid #343e71;
+  }
+
+  .person-remove:active {
+    background-color: #E6E6E6;
+    outline: none;
+  }
+
+  .person-remove:disabled {
+    outline: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .person-add {
@@ -231,14 +260,24 @@
     content: "";
   }
 
+  .person-add:hover {
+    color: #000000;
+    background-color: #E6E6E6;
+  }
+
   .person-add:focus {
-   color: #000000;
-   outline: 2px solid #343e71;
+    background-color: #E6E6E6;
+    outline: 2px solid #343e71;
   }
 
   .person-add:active {
-    background-color: transparent;
+    background-color: #E6E6E6;
     outline: none;
+  }
+
+  .person-add:disabled {
+    outline: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .page-header {
@@ -338,7 +377,6 @@
     padding: 0;
   }
 
-
   .user-item {
     min-width: 44px;
     min-height: 64px;
@@ -347,14 +385,25 @@
   }
 
   .user-link {
+    position: relative;
     display: block;
     margin: 0;
     padding: 32px 12px;
     text-decoration: none;
   }
 
-  .user-link {
-    position: relative;
+  .user-link:hover {
+    fill: rgba(0, 0, 0, 0.6);
+  }
+
+  .user-link:focus {
+    outline: 2px solid #343e71;
+    border-radius: 4px;
+  }
+
+  .user-link:active {
+    fill: rgba(0, 0, 0, 0.2);
+    outline: none;
   }
 
   .image-search {
@@ -367,20 +416,6 @@
     position: absolute;
     top: 24px;
     left: 13px;
-  }
-
-  .user-link:hover {
-    color: rgba(0, 0, 0, 0.6);
-  }
-
-  .user-link:focus {
-    outline: 2px solid #343e71;
-    border-radius: 4px;
-  }
-
-  .user-link:active {
-    color: rgba(0, 0, 0, 0.2);
-    outline: none;
   }
 
   .favourites-number {
@@ -432,6 +467,7 @@
   }
 
   .navigation-button:active {
+    outline: none;
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -780,6 +816,7 @@
   }
 
   .hotel-search-sedona:active {
+    outline: none;
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -846,19 +883,6 @@
     padding: 0;
   }
 
-  .form-email:hover {
-    background-color: #E6E6E6;
-  }
-
-  .form-email:focus {
-    background-color: #E6E6E6;
-  }
-
-  .form-email:active {
-    background-color: #F2F2F2;
-    outline: 2px solid #000000;
-  }
-
   .form-email {
     width: 413px;
     padding: 14px 20px;
@@ -870,7 +894,26 @@
     color: #000000;
     background-color: #F2F2F2;
     border: none;
-    text-align: calc(10px);
+  }
+
+  .form-email:hover {
+    background-color: #E6E6E6;
+  }
+
+  .form-email:focus {
+    background-color: #E6E6E6;
+    outline: 2px solid #343e71;
+  }
+
+  .form-email:active {
+    background-color: #F2F2F2;
+    outline: 2px solid #000000;
+  }
+
+  .form-email:disabled {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    cursor: default;
   }
 
   .page-foter {
@@ -912,7 +955,8 @@
     position: relative;
     width: 24px;
     margin: 0;
-    padding: 13px 11.67px;
+    padding: 11px 11.67px;
+    fill: #83B3D3;
   }
 
   .image-vkontakte {
@@ -936,14 +980,17 @@
 
 
   .social-link:hover {
+    fill: #68A2CA;
   }
 
-  .social-link:focus  {
+  .social-link:focus {
+    fill: #68A2CA;
     outline: 2px solid #343e71;
     border-radius: 4px;
   }
 
   .social-link:active {
+    fill: rgba(104, 162, 202, 0.3);
     outline: none;
   }
 
@@ -985,7 +1032,7 @@
 
   .html-academy {
     width: 114.9px;
-    margin: 1.5px 0;
+    margin: 2.5px 0;
     padding: 0;
   }
 
@@ -997,16 +1044,18 @@
 
 
   .html-academy-link:hover {
-
+    fill: #756157;
   }
 
 
   .html-academy-link:focus {
+    fill: #756157;
     outline: 2px solid #343e71;
     border-radius: 4px;
   }
 
   .html-academy-link:active {
+    fill: rgba(117, 97, 87, 0.3);
     outline: none;
   }
 
@@ -1067,7 +1116,12 @@
     background-repeat: no-repeat;
   }
 
+  .breadcrumbs-link {
+    fill: #FFFFFF;
+  }
+
   .breadcrumbs-link:hover {
+    fill: rgba(255, 255, 255, 0.6);
   }
 
   .breadcrumbs-link:focus {
@@ -1076,6 +1130,7 @@
   }
 
   .breadcrumbs-link:active {
+    fill: rgba(255, 255, 255, 0.3);
     outline: none;
   }
 
@@ -1191,26 +1246,32 @@
     cursor: pointer;
   }
 
-.input-control {
+  .input-control {
     margin: 0;
     margin-right: 16px;
   }
 
   .control:hover .control-mark {
     background-color: rgba(255, 255, 255, 0.5);
-    border-color:  transparent;
+    border-color: transparent;
   }
 
   .control:focus .control-mark {
+    outline: 3px solid #83B3D3;
   }
 
   .control:active .control-mark {
     background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid transparent;
+  }
+
+  .control:disabled .control-mark {
+    background-color: #E5E5E5;
+    outline: none;
+    cursor: default;
   }
 
   .input-control[type="checkbox"]:checked + .control-mark::before,
-  .input-control[type="checkbox"]:checked + .control-mark::after  {
+  .input-control[type="checkbox"]:checked + .control-mark::after {
     position: absolute;
     background-color: #3F5E72;
     content: "";
@@ -1246,16 +1307,22 @@
 
   .control:hover .control-mark-radio {
     background-color: rgba(255, 255, 255, 0.5);
-    border-color:  transparent;
+    border-color: transparent;
   }
 
   .control:focus .control-mark-radio {
+    outline: 2px solid #83B3D3;
   }
 
   .control:active .control-mark-radio {
     background-color: rgba(255, 255, 255, 0.4);
     border-color: transparent;
+  }
 
+  .control:disabled .control-mark-radio {
+    background-color: #E5E5E5;
+    outline: none;
+    cursor: default;
   }
 
   .input-control[type="radio"]:checked + .control-mark-radio::before {
@@ -1274,13 +1341,14 @@
     cursor: pointer;
   }
 
-  .control-label:focus {
-
-  }
-
   .control-label:active {
     color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
+  }
+
+  .control-label:disabled {
+    color: rgba(0, 0, 0, 0.3);
+    cursor: default;
   }
 
   .filter-price {
@@ -1335,6 +1403,12 @@
   .price-input:active {
     background-color: #F2F2F2;
     outline: 2px solid #000000;
+  }
+
+  .price-input:disabled {
+    background-color: #E5E5E5;
+    outline: none;
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .price-min {
@@ -1394,6 +1468,12 @@
 
   .range-toggle:focus {
     outline: 2px solid #83B3D3;
+  }
+
+  .range-toggle:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    cursor: default;
   }
 
   .toggle-min {
@@ -1485,6 +1565,9 @@
 
   .select-control:disabled {
     border: 2px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    cursor: default;
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .sorting-block {
@@ -1914,12 +1997,13 @@
     position: relative;
     width: 577px;
     margin: 0;
-    padding: 62.7px 72.5px;
+    padding: 62.7px 69.5px;
   }
 
   .search-titel {
     width: 413px;
     margin: 0;
+    margin-top: 2px;
     margin-right: 130px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
@@ -1933,8 +2017,8 @@
 
   .modal-close {
     position: absolute;
-    top: 63px;
-    left: 616px;
+    top: 64px;
+    left: 612px;
     width: 52px;
     height: 52px;
     background-color: #F2F2F2;
@@ -1943,10 +2027,10 @@
 
   .modal-close::before {
     position: absolute;
-    top: 16px;
-    left: 25px;
+    top: 18px;
+    left: 26px;
     width: 2px;
-    height: 20px;
+    height: 18px;
     transform: rotate(45deg);
     background-color: #000000;
     content: "";
@@ -1954,10 +2038,10 @@
 
   .modal-close::after {
     position: absolute;
-    top: 16px;
-    left: 25px;
+    top: 18px;
+    left: 26px;
     width: 2px;
-    height: 20px;
+    height: 18px;
     transform: rotate(-45deg);
     background-color: #000000;
     content: "";
@@ -1973,12 +2057,13 @@
   }
 
   .modal-close:active {
-    outline: none;
+    outline: transparent;
     background-color: #E6E6E6;
+    color: rgba(0, 0, 0, 0.7);
   }
 
   .search-options {
-    margin-top: 64px;
+    margin-top: 63px;
     width: 577px;
   }
 
@@ -2029,12 +2114,16 @@
     background-color: #E6E6E6;
   }
 
-
   .input-date:active {
     outline: 2px solid #000000;
     background-color: #F2F2F2;
   }
 
+  .input-date:disabled {
+    color: rgba(0, 0, 0, 0.3);
+    outline: rgba(0, 0, 0, 0.3);
+    cursor: default;
+  }
 
   .date-error {
     margin: 0;
@@ -2154,10 +2243,10 @@
     top: -9px;
     left: 117px;
     width: 0;
-	  height: 0;
-	  border-left: 10px solid transparent;
-	  border-right: 10px solid transparent;
-	  border-bottom: 9px solid #333333;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 9px solid #333333;
     content: "";
   }
 
@@ -2197,14 +2286,21 @@
   }
 
   .person-number:focus {
+    background-color: #E6E6E6;
     outline: none;
+  }
+
+  .person-number:disabled {
+    color: rgba(0, 0, 0, 0.3);
+    outline: rgba(0, 0, 0, 0.3);
+    cursor: default;
   }
 
   .button-find {
     width: 557px;
     margin: 0 auto;
     margin-top: 48px;
-    padding: 18px 78px;
+    padding: 18px 10px;
     border: none;
     border-radius: 10px;
     background-color: #83B3D3;
