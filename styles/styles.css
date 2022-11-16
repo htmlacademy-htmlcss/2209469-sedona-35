@@ -1256,7 +1256,7 @@
     border-color: transparent;
   }
 
-  .control:focus .control-mark {
+  .catalog-filter-checkbox .input-control:focus ~ .control-mark {
     outline: 3px solid #83B3D3;
   }
 
@@ -1310,8 +1310,9 @@
     border-color: transparent;
   }
 
-  .control:focus .control-mark-radio {
+  .catalog-filter-radio .input-control:focus ~ .control-mark-radio {
     outline: 2px solid #83B3D3;
+    opacity: 1;
   }
 
   .control:active .control-mark-radio {
@@ -1385,6 +1386,10 @@
     justify-content: space-between;
   }
 
+  .price-lable {
+    position: relative;
+  }
+
   .price-input::-webkit-outer-spin-button,
   .price-input::-webkit-inner-spin-button {
     appearance: none;
@@ -1435,6 +1440,17 @@
     line-height: 24px;
     font-weight: 700;
     color: #000000;
+  }
+
+  .price-text {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #a0a0a0;
   }
 
   .range-block {
