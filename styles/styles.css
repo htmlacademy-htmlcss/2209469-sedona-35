@@ -91,13 +91,12 @@
   }
 
   .appointment-button:focus {
-    outline: 2px solid #343e71;
+    background-color: #68A2CA;
   }
 
   .appointment-button:active {
-    background-color: #82B3D3;
+    background-color: #68A2CA;
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .appointment-button:disabled {
@@ -131,7 +130,6 @@
 
   .button-use:focus {
     background-color: #68A2CA;
-    outline: 2px solid #343e71;
   }
 
   .button-use:active {
@@ -169,18 +167,12 @@
     color: rgba(255, 255, 255, 0.4);
   }
 
-  .button-reset:focus {
-    outline: 3px solid #83B3D3;
-  }
-
   .button-reset:active {
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .button-reset:disabled {
     color: rgba(255, 255, 255, 0.2);
-    outline: none;
     cursor: default;
   }
 
@@ -191,50 +183,47 @@
     padding: 14px 20px;
     background-color: #F2F2F2;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px 0 0 4px;
     cursor: pointer;
   }
 
-  .person-remove::before {
+  .image-remove {
     position: absolute;
-    top: 17px;
-    left: 20px;
-    width: 2px;
-    height: 14px;
-    transform: rotate(90deg);
-    background-color: rgba(117, 97, 87, 0.3);
-    content: "";
+    top: 13px;
+    left: 10px;
+    padding: 10px 4px;
+    fill: #756157;
+    fill-opacity: calc(.3);
   }
 
-  .person-remove::after {
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    width: 2px;
-    height: 14px;
-    transform: rotate(0deg);
-    background-color: rgba(117, 97, 87, 0.3);
-    content: "";
+  .person-remove:hover .image-remove {
+    fill: #000000;
+    fill-opacity: 1;
   }
 
-  .person-remove:hover {
-    color: #000000;
-    background-color: #E6E6E6;
+  .person-remove:focus .image-remove {
+    outline: 3px solid #82B3D3;
+    border-radius: 4px;
+    fill: #000000;
+    fill-opacity: 1;
   }
 
-  .person-remove:focus {
-    background-color: #E6E6E6;
-    outline: 2px solid #343e71;
-  }
-
-  .person-remove:active {
-    background-color: #E6E6E6;
+  .person-remove:active .image-remove {
     outline: none;
+    fill: #756157;
+    fill-opacity: calc(.3);
+  }
+
+  .person-remove:disabled .image-remove {
+    cursor: default;
   }
 
   .person-remove:disabled {
-    outline: rgba(0, 0, 0, 0.3);
-    color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+  }
+
+  .person-remove:focus {
+    outline: none;
   }
 
   .person-add {
@@ -245,39 +234,47 @@
     padding: 14px 20px;
     background-color: #F2F2F2;
     border: none;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
   }
 
-  .person-add::before {
+  .image-add {
     position: absolute;
-    top: 17px;
-    left: 19px;
-    width: 2px;
-    height: 14px;
-    transform: rotate(90deg);
-    background-color: rgba(117, 97, 87, 0.3);
-    content: "";
+    top: 13px;
+    left: 9px;
+    padding: 4px 4px;
+    fill: #756157;
+    fill-opacity: calc(.3);
   }
 
-  .person-add:hover {
-    color: #000000;
-    background-color: #E6E6E6;
+  .person-add:hover .image-add {
+    fill: #000000;
+    fill-opacity: 1;
   }
 
-  .person-add:focus {
-    background-color: #E6E6E6;
-    outline: 2px solid #343e71;
+  .person-add:focus .image-add {
+    outline: 3px solid #82B3D3;
+    border-radius: 4px;
+    fill: #000000;
+    fill-opacity: 1;
   }
 
-  .person-add:active {
-    background-color: #E6E6E6;
+  .person-add:active .image-add {
     outline: none;
+    fill: #756157;
+    fill-opacity: calc(.3);
+  }
+
+  .person-add:disabled .image-add {
+    cursor: default;
   }
 
   .person-add:disabled {
-    outline: rgba(0, 0, 0, 0.3);
-    color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+  }
+
+  .person-add:focus {
+    outline: none;
   }
 
   .page-header {
@@ -296,15 +293,6 @@
     height: 64px;
     padding: 0;
     margin-left: 69.9px;
-  }
-
-  .navigation-logo:focus {
-    outline: 2px solid #343e71;
-    border-radius: 4px;
-  }
-
-  .navigation-logo:active {
-    outline: none;
   }
 
   .image-logo {
@@ -328,7 +316,9 @@
   .navigation-link {
     display: block;
     padding: 19px 16px;
+    padding-right: 13px;
     margin: 0;
+    margin-right: 3px;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -345,8 +335,12 @@
   }
 
   .navigation-link:focus {
-    outline: 2px solid #343e71;
-    border-radius: 4px;
+    outline: 2px solid #000000;
+  }
+
+  .navigation-link:active {
+    color: rgba(0, 0, 0, 0.2);
+    outline: none;
   }
 
   .link-current::before {
@@ -357,11 +351,6 @@
     display: flex;
     top: 46px;
     content: "";
-  }
-
-  .navigation-link:active {
-    color: rgba(0, 0, 0, 0.2);
-    outline: none;
   }
 
   .link-current {
@@ -396,14 +385,8 @@
     fill: rgba(0, 0, 0, 0.6);
   }
 
-  .user-link:focus {
-    outline: 2px solid #343e71;
-    border-radius: 4px;
-  }
-
   .user-link:active {
     fill: rgba(0, 0, 0, 0.2);
-    outline: none;
   }
 
   .image-search {
@@ -423,6 +406,7 @@
     top: 11px;
     left: 20px;
     padding: 5px;
+    min-width: 10px;
     border-radius: 50%;
     letter-spacing: -0.1em;
     margin: 0;
@@ -463,11 +447,9 @@
 
   .navigation-button:focus {
     background-color: #615048;
-    outline: 2px solid #343e71;
   }
 
   .navigation-button:active {
-    outline: none;
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -492,6 +474,7 @@
     margin: 0;
     color: #000000;
     background-image: url("../images/image-panel.svg"), url("../images/photo-sedona.jpg");
+    background-color: #000000;
     background-size: 100% auto, 100% auto;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, center;
@@ -594,6 +577,7 @@
     height: 385px;
     margin: 0;
     padding: 0;
+    background-color: #82B3D3;
   }
 
   .advantage-item-center {
@@ -671,6 +655,9 @@
   .advantage-bridge {
     width: 800px;
     height: 384px;
+    padding: 0;
+    margin: 0;
+    background-color: #82B3D3;
   }
 
   .advantage-service-list {
@@ -711,7 +698,6 @@
     background-repeat: no-repeat;
     background-position: center 77px;
   }
-
 
   .advantage-service-titel {
     margin: auto;
@@ -812,11 +798,9 @@
 
   .hotel-search-sedona:focus {
     background-color: #615048;
-    outline: 2px solid #343e71;
   }
 
   .hotel-search-sedona:active {
-    outline: none;
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -832,6 +816,7 @@
     width: 1200px;
     text-align: center;
     background-image: url("../images/advantage/image-appointment.jpg");
+    background-color: #000000;
     color: #000000;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -902,12 +887,10 @@
 
   .form-email:focus {
     background-color: #E6E6E6;
-    outline: 2px solid #343e71;
   }
 
   .form-email:active {
     background-color: #F2F2F2;
-    outline: 2px solid #000000;
   }
 
   .form-email:disabled {
@@ -939,7 +922,7 @@
     list-style-type: none;
     width: 142px;
     margin: 0;
-    margin-top: 11px;
+    margin-top: 3px;
     margin-right: 41.5px;
     padding: 0;
   }
@@ -955,29 +938,9 @@
     position: relative;
     width: 24px;
     margin: 0;
-    padding: 11px 11.67px;
+    padding: 18px 12px;
     fill: #83B3D3;
   }
-
-  .image-vkontakte {
-    position: absolute;
-    top: 0;
-    left: 10.5px;
-  }
-
-  .image-telegram {
-    position: absolute;
-    top: 0;
-    left: 14.5px;
-  }
-
-
-  .image-youtube {
-    position: absolute;
-    top: 0;
-    left: 12px;
-  }
-
 
   .social-link:hover {
     fill: #68A2CA;
@@ -985,26 +948,40 @@
 
   .social-link:focus {
     fill: #68A2CA;
-    outline: 2px solid #343e71;
-    border-radius: 4px;
   }
 
   .social-link:active {
     fill: rgba(104, 162, 202, 0.3);
-    outline: none;
+  }
+  .image-vkontakte {
+    position: absolute;
+    top: 10px;
+    left: 10.5px;
+  }
+
+  .image-telegram {
+    position: absolute;
+    top: 8px;
+    left: 14.6px;
+  }
+
+  .image-youtube {
+    position: absolute;
+    top: 8px;
+    left: 11.9px;
   }
 
   .contacts {
     width: 720px;
     margin: 0;
-    margin-right: 41.5px;
+    margin-right: 40.5px;
     padding: 0;
   }
 
   .contacts-phone {
     display: block;
     width: 334px;
-    margin: 0 193px;
+    margin: 1px 193px;
     font-family: "PT Sans", sans-serif;
     font-size: 40px;
     line-height: 40px;
@@ -1021,18 +998,16 @@
 
   .contacts-phone:focus {
     color: #756157;
-    outline: 2px solid #343e71;
-    border-radius: 4px;
+    outline: 2px solid #000000;
   }
 
   .contacts-phone:active {
     color: rgba(117, 97, 87, 0.3);
-    outline: none;
   }
 
   .html-academy {
     width: 114.9px;
-    margin: 2.5px 0;
+    margin: 3.5px 0;
     padding: 0;
   }
 
@@ -1042,23 +1017,17 @@
     padding: 0;
   }
 
-
   .html-academy-link:hover {
     fill: #756157;
   }
 
-
   .html-academy-link:focus {
     fill: #756157;
-    outline: 2px solid #343e71;
-    border-radius: 4px;
   }
 
   .html-academy-link:active {
     fill: rgba(117, 97, 87, 0.3);
-    outline: none;
   }
-
 
   .inner-header {
     display: flex;
@@ -1067,7 +1036,8 @@
     margin: 0;
     padding: 0;
     background-image: url("../images/image-filter.jpg");
-    background-size: 100% auto;
+    background-color: #000000;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 
@@ -1100,6 +1070,7 @@
 
   .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -1124,14 +1095,8 @@
     fill: rgba(255, 255, 255, 0.6);
   }
 
-  .breadcrumbs-link:focus {
-    outline: 2px solid #343e71;
-    border-radius: 2px;
-  }
-
   .breadcrumbs-link:active {
     fill: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .image-home {
@@ -1141,7 +1106,7 @@
   }
 
   .breadcrumbs-hotel {
-    width: 73px;
+    min-width: 73px;
     margin: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
@@ -1483,6 +1448,10 @@
   }
 
   .range-toggle:focus {
+    outline: 3px solid #83B3D3;
+  }
+
+  .range-toggle:active {
     outline: 2px solid #83B3D3;
   }
 
@@ -1624,6 +1593,11 @@
     border: 2px solid #000000;
   }
 
+  .card-current {
+    border: 2px solid #000000;
+    border-radius: 4px;
+  }
+
   .button-link-card:nth-child(3n) {
     margin: 0;
   }
@@ -1645,6 +1619,7 @@
     grid-template-columns: repeat(3, 340px);
     list-style-type: none;
     gap: 20px;
+    row-gap: 14px;
     margin: 0;
     padding: 0;
   }
@@ -1664,8 +1639,7 @@
   }
 
   .catalog-link:focus {
-    outline: 2px solid #343e71;
-    border-radius: 4px;
+    outline: 2px solid #000000;
   }
 
   .catalog-link:active {
@@ -1674,14 +1648,14 @@
 
   .image-hotel {
     width: 301px;
-    margin: 19px 18px;
+    margin: 18.5px 18px;
     margin-bottom: 13px;
     padding: 0;
   }
 
   .catalog-titel {
     width: 300px;
-    margin: 0 20px;
+    margin: 0 18px;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 24px;
@@ -1743,13 +1717,11 @@
 
   .button-detailed:focus {
     background-color: #615048;
-    outline: 2px solid #343e71;
   }
 
   .button-detailed:active {
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .button-detailed:disabled {
@@ -1777,13 +1749,12 @@
   }
 
   .button-favourites:focus {
-    outline: 2px solid #343e71;
+    background-color: #68A2CA;
   }
 
   .button-favourites:active {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .button-favourites:disabled {
@@ -1812,13 +1783,11 @@
 
   .button-added:focus {
     background-color: #6C9E42;
-    outline: 2px solid #343e71;
   }
 
   .button-added:active {
     background-color: #7DB54F;
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .button-added:disabled {
@@ -1826,14 +1795,26 @@
     color: #FFFFFF;
   }
 
-  .catalogd-stars {
+  .rating-star {
+    display: flex;
+    width: 140px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+  }
+
+  .star-item {
+    margin: 0;
+    margin-right: 6px;
+  }
+
+  .image-star {
+    margin: 11px 0;
   }
 
   .catalog-rating {
     margin: 0;
-    padding: 9px 0;
+    padding: 11px 0;
     border-radius: 4px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
@@ -1849,7 +1830,7 @@
     position: relative;
     text-align: center;
     width: 1060px;
-    padding: 42px 70px 60px 70px;
+    padding: 38px 70px 60px 70px;
     margin: 0;
   }
 
@@ -1904,12 +1885,11 @@
     color: #000000;
     background-color: #F2F2F2;
     text-transform: uppercase;
-    text-decoration: none;
   }
 
   .pagination-link {
     display: block;
-    width: 13px;
+    width: 22px;
     height: 37px;
     border-radius: 4px;
     padding: 12px 19px;
@@ -1924,7 +1904,6 @@
   }
 
   .pagination-link:last-child {
-    width: 23px;
     border-radius: 4px;
     margin: 0;
   }
@@ -1935,13 +1914,11 @@
 
   .pagination-link:focus {
     background-color: #68A2CA;
-    outline: 2px solid #343e71;
   }
 
   .pagination-link:active {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
-    outline: none;
   }
 
   .pagination-text {
@@ -1978,7 +1955,7 @@
 
   .appointment-information-second {
     margin: 0 auto;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     width: 475px;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
@@ -2295,15 +2272,6 @@
   .person-number::-webkit-inner-spin-button,
   .person-number::-webkit-outer-spin-button {
     display: none;
-  }
-
-  .person-number:hover {
-    background-color: #E6E6E6;
-  }
-
-  .person-number:focus {
-    background-color: #E6E6E6;
-    outline: none;
   }
 
   .person-number:disabled {
